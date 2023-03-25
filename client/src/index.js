@@ -7,6 +7,7 @@ import Exp from './components/Exp';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import ProductRegistration from './pages/ProductRegistration';
+import Cart from './pages/Cart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -19,6 +20,7 @@ export default function Main() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/producePage" element={<Exp />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/productRegistration" element={<ProductRegistration />} />
           <Route path="*" element={<h1>404</h1>} />
         </Routes>
