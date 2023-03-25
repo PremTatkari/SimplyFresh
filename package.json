@@ -1,0 +1,18 @@
+{
+  "name": "simplyfresh",
+  "version": "1.0.0",
+  "description": "A website to provide consumers with fresh produce straight from famers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Prem Tatkari",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "config": "^3.3.9",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3"
+  }
+}
