@@ -7,7 +7,9 @@ import Exp from './components/Exp';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import ProductRegistration from './pages/ProductRegistration';
+
 import Cart from './pages/Cart';
+
 import About from './pages/About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
