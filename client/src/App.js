@@ -1,7 +1,7 @@
-
 import './App.css';
+import './cara.css';
 import Cards from './components/Cards';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Carousel from "./components/Carousel";import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Exp from './components/Exp';
 
 function App() {
@@ -11,7 +11,9 @@ function App() {
         <div><Cards /></div>
         <div><Cards /></div>
         <div><Cards /></div>
-        <div><Cards /></div>
+        <div><Carousel></Carousel></div>
+      
+      <div><Cards /></div>
         <div><Cards /></div>
         <div><Cards /></div>
         <div><Cards /></div>
