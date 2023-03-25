@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   return (
     <div>
@@ -74,6 +76,11 @@ export default function Navbar() {
                 >
                   Feedback
                 </a>
+              </li>
+              <li class="lg:pr-2" data-te-nav-item-ref>
+                <Link style={{color:"white"}} to='/productRegistration'>
+                  List Produce
+                </Link>
               </li>
             </ul>
           </div>
