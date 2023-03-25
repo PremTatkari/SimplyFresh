@@ -3,8 +3,8 @@ import axios from 'axios';
 import './App.css';
 import './cara.css';
 import Cards from './components/Cards';
-import Carousel from "./components/Carousel"; import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Exp from './components/Exp';
+import Carousel from "./components/Carousel"; 
+import Navbar from './components/Navbar';
 
 function App() {
   const [produce, setProduce] = useState([
@@ -29,8 +29,12 @@ function App() {
   const produceList = produce.length === 0 ? "No produce" : produce.map((prod,key) => <Cards title={prod.title} price={prod.price} class={prod.class} key={key} />);
 
   return (
+    <div>
+      <Navbar />
+      <Carousel />
     <div class="grid grid-cols-4 gap-4">
       {produceList}
+    </div>
     </div>
   );
 }
