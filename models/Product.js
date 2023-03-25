@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
-const ProduceSchema = new mongoose.Schema({
-    name:{
+const ProductSchema = new mongoose.Schema({
+    title:{
         type: String,
         required: true
     },
     price:{
-        type: Number,
+        type: String,
         required: true
     },
     class:{
@@ -15,4 +15,4 @@ const ProduceSchema = new mongoose.Schema({
     }
 });
 
-modules.exports = Produce = mongoose.model("produce", ProduceSchema);
+module.exports = Product = mongoose.model("product", ProductSchema);

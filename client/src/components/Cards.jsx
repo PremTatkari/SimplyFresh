@@ -39,8 +39,7 @@ export default function Cards(props) {
               color="blue-gray"
               className="flex items-center gap-1.5 font-normal"
             >
-              <StarIcon className="-mt-0.5 h-5 w-5 text-yellow-700" />
-              {props.price}
+              ₹{props.price}
             </Typography>
           </div>
           <Typography color="gray">{props.class}</Typography>
