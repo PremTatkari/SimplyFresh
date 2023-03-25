@@ -26,7 +26,7 @@ export default function Carousel() {
       <div>
          <h2>
             {" "}
-            Creating the image slider from scratch in ReactJS
+            SimplyFresh
          </h2>
          <section className = "image-slider">
             <div class = "left">
