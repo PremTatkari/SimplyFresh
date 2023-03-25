@@ -5,6 +5,9 @@ import './cara.css'
 import Cards from './components/Cards';
 import Carousel from './components/Carousel';
 import Navbar from './components/Navbar';
+import Login from './components/Login';
+import Console from './Fcomponents/Console';
+import Signup from './components/Signup'
 
 function App() {
   const [products, setProduct] = useState([]);
