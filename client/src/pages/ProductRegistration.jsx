@@ -10,6 +10,7 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 
 export default function ProductRegistration() {
     const navigate = useNavigate();
@@ -41,6 +42,8 @@ export default function ProductRegistration() {
     }
 
   return (
+    <div>
+        <Navbar/>
     <div className="product">
       <Card color="transparent" shadow={false}>
         <Typography variant="h4" color="blue-gray">
@@ -78,6 +81,7 @@ export default function ProductRegistration() {
           </Button>
         </form>
       </Card>
+    </div>
     </div>
   );
 }

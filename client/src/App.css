@@ -37,6 +37,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 12rem;
 }
 
 @keyframes App-logo-spin {
