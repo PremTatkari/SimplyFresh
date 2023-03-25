@@ -6,7 +6,7 @@ export default function Login() {
   return (
     <div>
         
-    <section>
+    <section className='login'>
         <div class="form-box">
             <div class="form-value">
                 <form action="">
