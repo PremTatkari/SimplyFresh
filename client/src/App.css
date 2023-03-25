@@ -33,6 +33,11 @@
 
 }
 
+.product{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @keyframes App-logo-spin {
   from {
