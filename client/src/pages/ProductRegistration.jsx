@@ -6,11 +6,16 @@ import {
     Typography,
 } from "@material-tailwind/react";
 
-
+import React, { useState } from "react";
 
 export default function ProductRegistration() {
+    const [file, setFile] = useState();
+    function handleChange(e) {
+        console.log(e.target.files);
+        setFile(URL.createObjectURL(e.target.files[0]));
+    }
     return (
-        <div className = "product">
+        <div className="product">
             <Card color="transparent" shadow={false} className="scale-5">
                 <Typography variant="h4" color="blue-gray">
                     Create a Listing
@@ -23,6 +28,9 @@ export default function ProductRegistration() {
                         <Input size="lg" label="Name" />
                         <Input size="lg" label="Price" type="number" />
                         <Input size="lg" label="Class" />
+                        <h2>Add Image:</h2>
+                        <input type="file" onChange={handleChange} />
+                        <img src={file} />
                     </div>
                     <Checkbox
                         label={
