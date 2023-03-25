@@ -3,6 +3,7 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 
 const product = require("./routes/api/product");
+const farmer = require("./routes/api/farmer")
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/product", product);
+app.use("/api/farmer", farmer);
 
 const PORT = process.env.PORT || 5000;
 
