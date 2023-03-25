@@ -14,3 +14,5 @@ const ProduceSchema = new mongoose.Schema({
         required: true
     }
 });
+
+modules.exports = Produce = mongoose.model("produce", ProduceSchema);
