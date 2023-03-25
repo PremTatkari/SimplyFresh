@@ -1,39 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import './cara.css';
+import './cara.css'
 import Cards from './components/Cards';
 import Carousel from './components/Carousel';
 import Navbar from './components/Navbar';
 
 function App() {
-  const [produce, setProduce] = useState([
-    {
-      title: "ABC",
-      price: 12,
-      class: "Organic"
-    }
-  ]);
+  const [products, setProduct] = useState([]);
 
   useEffect(() => {
     axios
-    .get("http://localhost:5000/api/produce")
+    .get("http://localhost:5000/api/product")
     .then((res) => {
-      setProduce(res.data);
+      setProduct(res.data);
     })
     .catch((err) => {
       console.log("Error");
     });
   }, []);
 
-  const produceList = produce.length === 0 ? "No produce" : produce.map((prod,key) => <Cards title={prod.title} price={prod.price} class={prod.class} key={key} />);
+  const productList = products.length === 0 ? "No products" : products.map((product,key) => <Cards title={product.title} price={product.price} class={product.class} key={key} />);
 
   return (
     <div>
       <Navbar />
       <Carousel />
     <div class="grid grid-cols-4 gap-4">
-      {produceList}
+      {productList}
     </div>
     </div>
   );
