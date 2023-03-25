@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import './cara.css';
 import Cards from './components/Cards';
-import Carousel from "./components/Carousel"; 
+import Carousel from './components/Carousel';
 import Navbar from './components/Navbar';
 
 function App() {
