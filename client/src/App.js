@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
+import './cara.css';
 import Cards from './components/Cards';
+import Carousel from "./components/Carousel"; import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Exp from './components/Exp';
 
 function App() {
   const [produce, setProduce] = useState([
