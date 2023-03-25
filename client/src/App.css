@@ -1,3 +1,9 @@
+body {
+  background-color: #71b86b;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
 .App {
   text-align: center;
 }
@@ -28,21 +34,23 @@
   color: #61dafb;
 }
 
-.card{
- color: red;
+.card {
+  color: red;
 
 }
 
-.product{
+.product {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 12rem;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

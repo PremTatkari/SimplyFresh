@@ -82,6 +82,11 @@ export default function Navbar() {
                   List Produce
                 </Link>
               </li>
+              <li class="lg:pr-2" data-te-nav-item-ref>
+                <Link style={{color:"white"}} to='/Login'>
+                  Login
+                </Link>
+              </li>
             </ul>
           </div>
 
