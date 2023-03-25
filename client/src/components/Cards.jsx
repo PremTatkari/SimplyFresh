@@ -43,6 +43,7 @@ export default function Cards(props) {
             </Typography>
           </div>
           <Typography color="gray">{props.class}</Typography>
+          
         </CardBody>
       </Card>
     </Link>
