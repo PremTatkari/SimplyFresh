@@ -8,6 +8,10 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import ProductRegistration from './pages/ProductRegistration';
 
+import Cart from './pages/Cart';
+
+import About from './pages/About';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 export default function Main() {
@@ -18,7 +22,9 @@ export default function Main() {
           <Route path="/" element={<App />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/about" element={<About />} />
           <Route path="/producePage" element={<Exp />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/productRegistration" element={<ProductRegistration />} />
           <Route path="*" element={<h1>404</h1>} />
         </Routes>
