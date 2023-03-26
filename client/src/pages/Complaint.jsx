@@ -7,6 +7,7 @@ import {
     Button,
     Typography,
 } from "@material-tailwind/react";
+import Footer from '../components/Footer';
 
 export default function Complaint() {
     return (
@@ -40,9 +41,9 @@ export default function Complaint() {
                             Elaborate the issue
                             <div class="inputbox" className='outline outline-2  outline-offset-2'>
                                 <input
-                                    name="email"
+                                    name="issue"
                                     value=""
-                                    type="email"
+                                    type="textarea"
                                     required
                                     onChange=""
                                 />
@@ -57,7 +58,7 @@ export default function Complaint() {
                     </div>
                 </div>
             </div>
-
+            <Footer />
         </div>
     );
 };
