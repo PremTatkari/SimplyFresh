@@ -1,8 +1,11 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
+import { farmerUser } from "./Login";
 
-export default function Navbar() {
+export default function Navbar(props) {
+
+   
+
   return (
     <div>
       <nav
@@ -70,15 +73,21 @@ export default function Navbar() {
                   Products
                 </Link>
               </li>
-              <li class="lg:pr-2" data-te-nav-item-ref>
-                <Link style={{ color: "white" }} to='/Login'>
-                  Login
+              <li class="lg:pr-2" data-te-nav-item-ref onClick={props.handleLogOut}>
+                <Link style={{ color: "white" }} to='/Login' >
+                  {props.log}
                 </Link>
+              </li>
+              <li class="lg:pr-2" data-te-nav-item-ref>
+                  {}
               </li>
             </ul>
           </div>
 
           <div class="relative flex items-center">
+          <li class="lg:pr-2" data-te-nav-item-ref>
+                  {farmerUser}
+              </li>
           <li class="lg:pr-2" data-te-nav-item-ref>
                 <Link style={{color:"white"}} to='/cart'>
                   Cart

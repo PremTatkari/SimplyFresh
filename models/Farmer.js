@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
 
 const FarmerSchema = new mongoose.Schema({
     email:{
@@ -22,5 +23,7 @@ const FarmerSchema = new mongoose.Schema({
         required: true
     }
 });
+
+FarmerSchema.plugin(passportLocalMongoose);
 
 module.exports = Farmer = mongoose.model("farmer", FarmerSchema);

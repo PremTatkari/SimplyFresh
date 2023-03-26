@@ -12,6 +12,10 @@ const ProductSchema = new mongoose.Schema({
     class:{
         type: String,
         required: true
+    },
+    farmer:{
+        type: String,
+        required: true  
     }
 });
 

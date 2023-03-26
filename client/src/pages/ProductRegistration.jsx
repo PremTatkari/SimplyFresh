@@ -11,13 +11,15 @@ import { useNavigate } from "react-router";
 
 import React, { useState, useRef } from "react";
 import Navbar from "../components/Navbar";
+import globalVar from "../components/globalVar";
 
 export default function ProductRegistration() {
     const navigate = useNavigate();
     const [product, setProduct] = useState({
         title: "",
         price: "",
-        class: ""
+        class: "",
+        farmer: ""
     });
 
     const onChange = (e) => {
@@ -30,12 +32,13 @@ export default function ProductRegistration() {
         axios
             .post("http://localhost:5000/api/product", product)
             .then((res) => {
-                console.log("Inside");
                 setProduct({
                     title: "",
                     price: "",
-                    class: ""
+                    class: "",
+                    farmer: ""
                 });
+                globalVar = true;
                 navigate("/");
             })
             .catch((err) => console.log("Error while product registration"));
@@ -65,6 +68,7 @@ export default function ProductRegistration() {
                             <Input size="lg" label="Name" name="title" value={product.title} onChange={onChange} />
                             <Input size="lg" label="Price" name="price" type="number" value={product.price} onChange={onChange} />
                             <Input size="lg" label="Class" name="class" value={product.class} onChange={onChange} />
+                            <Input size="lg" label="Farmer" name="farmer" value={product.farmer} onChange={onChange} />
                         </div>
                         <Typography variant="h4" color="blue-gray">
                             Add image
