@@ -5,6 +5,7 @@ import './cara.css'
 import Cards from './components/Cards';
 import Carousel from './components/Carousel';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   const [farms, setFarm] = useState([]);
@@ -26,9 +27,10 @@ function App() {
     <div>
       <Navbar />
       <Carousel />
-    <div class="grid grid-cols-4 gap-4">
+    <div class="mb-4 grid grid-cols-4 gap-4">
       {farmList}
     </div>
+    <Footer/>
     </div>
   );
 }
