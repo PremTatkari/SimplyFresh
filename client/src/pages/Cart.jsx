@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
+import OrderConfirm from './OrderConfirm';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([
@@ -69,10 +70,11 @@ const Cart = () => {
                       <div className="col-span-1">
                           <div className="bg-gray-100 p-4">
                               <h3 className="font-medium">Total: ${getTotalPrice()}</h3>
-                              <button className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-full w-full font-medium">Checkout</button>
+                              <button className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-full w-full font-medium" >Checkout</button>
                           </div>
                       </div>
                   </div>
+                  
               ) : (
                   <p>Your cart is currently empty.</p>
               )}
@@ -80,5 +82,4 @@ const Cart = () => {
       </div></>
           );
           };
-          
           export default Cart;

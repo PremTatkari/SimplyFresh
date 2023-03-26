@@ -11,6 +11,7 @@ import ProductRegistration from './pages/ProductRegistration';
 import Cart from './pages/Cart';
 
 import About from './pages/About';
+import OrderConfirm from './pages/OrderConfirm';
 import Delivery from './pages/Delivery';
 import Complaint from './pages/Complaint';
 
@@ -29,6 +30,7 @@ export default function Main() {
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/producePage" element={<Exp />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/orderconfirm" element={<OrderConfirm />} />
           <Route path="/productRegistration" element={<ProductRegistration />} />
           <Route path="*" element={<h1>404</h1>} />
         </Routes>
