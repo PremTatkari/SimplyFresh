@@ -1,3 +1,6 @@
+import Footer from "../components/Footer"
+import Navbar from "../components/Navbar"
+
 /*
   This example requires some changes to your config:
   
@@ -15,21 +18,23 @@
 const products = [
   {
     id: 1,
-    name: 'Basic Tee',
+    name: 'Tomato',
     href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: '$35',
-    color: 'Black',
+    imageSrc: 'https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?cs=srgb&dl=pexels-pixabay-533280.jpg&fm=jpg',
+    imageAlt: "Picture of a vegetable.",
+    price: '₹35',
+    color: 'Organic',
   },
   // More products...
 ]
 
 export default function ProductPage() {
   return (
+    
     <div className="bg-white">
+      <Navbar/>
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900">Farmers products</h2>
 
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
@@ -57,6 +62,7 @@ export default function ProductPage() {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

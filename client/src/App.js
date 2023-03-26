@@ -27,7 +27,7 @@ function App() {
     <div>
       <Navbar />
       <Carousel />
-    <div class="mb-4 grid grid-cols-4 gap-4">
+    <div class="p-4 mb-4 grid grid-cols-4 gap-4">
       {farmList}
     </div>
     <Footer/>

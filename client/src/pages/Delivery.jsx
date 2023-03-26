@@ -7,6 +7,7 @@ import {
     Button,
     Typography,
 } from "@material-tailwind/react";
+import Footer from '../components/Footer';
 
 export default function Delivery() {
     return (
@@ -25,14 +26,14 @@ export default function Delivery() {
                     <div className="mt-10 flex justify-center items-center grid grid-rows-3 ">
                         <div className='h-27 max-w-full p-8 m-8 bg-white items-center justify-center '>
 
-                            From: Farmers Location  
+                            From: Farmers Location
                             <span className='m-10'></span>
-                            Estimated time: n/a 
+                            Estimated time: n/a
                             <span className='m-10'></span>
                             To: Customers Location
 
                             <Button className='my-6'>Accept</Button>
-                        
+
                         </div>
                     </div>
                     <div className="mt-10 text-gray-600">
@@ -40,7 +41,7 @@ export default function Delivery() {
                     </div>
                 </div>
             </div>
-
+            <Footer />
         </div>
     );
 };
