@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 
 const FarmerSchema = new mongoose.Schema({
-    farmer_id:{
-        type: Number,
-        required: true, 
-        unique: true  
-    },
     email:{
         type: String,
         required: true
@@ -26,7 +21,6 @@ const FarmerSchema = new mongoose.Schema({
         type: String,
         required: true
     }
-
 });
 
-module.exports = Product = mongoose.model("product", ProductSchema);
+module.exports = Farmer = mongoose.model("farmer", FarmerSchema);

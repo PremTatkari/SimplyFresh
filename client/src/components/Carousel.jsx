@@ -39,7 +39,7 @@ export default function Carousel() {
             key={ind}
           >
             {ind === activeImageNum && (
-              <img src={currentSlide.url} className="image" />
+              <img src={currentSlide.url} className="image" alt="carousel-img" />
             )}
           </div>
         );

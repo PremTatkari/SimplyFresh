@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './index.css';
 import App from './App';
-import Exp from './components/Exp';
+import Exp from './pages/ProductPage';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import ProductRegistration from './pages/ProductRegistration';

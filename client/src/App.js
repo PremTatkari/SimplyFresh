@@ -5,32 +5,29 @@ import './cara.css'
 import Cards from './components/Cards';
 import Carousel from './components/Carousel';
 import Navbar from './components/Navbar';
-import Login from './components/Login';
-import Console from './Fcomponents/Console';
-import Signup from './components/Signup'
 
 function App() {
-  const [products, setProduct] = useState([]);
+  const [farms, setFarm] = useState([]);
 
   useEffect(() => {
     axios
-    .get("http://localhost:5000/api/product")
+    .get("http://localhost:5000/api/farmer")
     .then((res) => {
-      setProduct(res.data);
+      setFarm(res.data);
     })
     .catch((err) => {
       console.log("Error");
     });
   }, []);
 
-  const productList = products.length === 0 ? "No products" : products.map((product,key) => <Cards title={product.title} price={product.price} class={product.class} key={key} />);
+  const farmList = farms.length === 0 ? "No farms" : farms.map((farm,key) => <Cards title={farm.farm_name} price={5} class={farm.farm_address} key={key} />);
 
   return (
     <div>
       <Navbar />
       <Carousel />
     <div class="grid grid-cols-4 gap-4">
-      {productList}
+      {farmList}
     </div>
     </div>
   );

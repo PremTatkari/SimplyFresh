@@ -1,23 +1,41 @@
 const express = require("express");
 const router = express.Router();
 
-const Farmer = require("../../models/Farmer")
+const Farmer = require("../../models/Farmer");
 
 router.get("/test", (req, res) => res.send("Farmer route testing"));
 
 router.get("/", (req, res) => {
   Farmer.find()
     .then((farmers) => res.json(farmers))
-    .catch((err) =>
-      res.status(404).json({ nofarmerfound: "No Farmer Found" })
-    );
+    .catch((err) => res.status(404).json({ nofarmerfound: "No Farmer Found" }));
 });
 
 router.post("/", (req, res) => {
-  console.log(req.body);
-  Farmer.create(req.body)
-    .then((farmer) => res.json({ msg: "Farmer added successfully" }))
-    .catch((err) => res.status(404).json({ error: "unable to add farmer" }));
+  Farmer.findOne({ email: req.body.email }).then(
+    (foundFarmer) => {
+      if (foundFarmer) {
+        res.json({ msg: "Farmer already exists", isLogged: false });
+      } else {
+        Farmer.create(req.body)
+          .then((farmer) => res.json({ msg: "Farmer added successfully", isLogged: true }))
+          .catch((err) =>
+            res.status(404).json({ error: "unable to add farmer", isLogged: false })
+          );
+      }
+    }
+  );
+});
+
+router.post("/login", (req, res) => {
+  const { email, password } = req.body;
+  Farmer.findOne({ email: email }).then((foundFarmer) => {
+    if (password === foundFarmer.password) {
+      res.json({ msg: "Login successful", foundFarmer: foundFarmer, isLogged: true });
+    } else {
+      res.json({ msg: "wrong credentials", isLogged: false });
+    }
+  });
 });
 
 router.put("/:id", (req, res) => {
