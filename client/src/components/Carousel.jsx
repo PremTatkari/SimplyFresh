@@ -52,6 +52,9 @@ const Carousel = (props) => {
     }
 
     return (
+
+        <div> 
+            <h2>DELIVERING FRESH PRODUCE WITH EASE. </h2>
         <div className="carousel-container">
             <div className="carousel-wrapper">
                 {/* You can alwas change the content of the button to other things */}
@@ -81,6 +84,7 @@ const Carousel = (props) => {
                     </button>
                 }
             </div>
+        </div>
         </div>
     )
 }

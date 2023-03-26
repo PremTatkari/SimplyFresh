@@ -43,7 +43,7 @@ export default function Navbar() {
             data-te-collapse-item
           >
             <Link to='/'
-              class="mt-2 mr-2 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mt-0"
+              class="mt-2 mr-2 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mt-0 pr-4"
 
             >
               <h1>SimplyFresh</h1>
@@ -51,27 +51,27 @@ export default function Navbar() {
             </Link>
 
             <ul
-              class="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
+              class="list-style-none mr-auto flex flex-col pl-0 lg:flex-row "
               data-te-navbar-nav-ref
             >
-              <li class="lg:pr-2" data-te-nav-item-ref>
-                <Link style={{ color: "white" }} to='/complaint'>
+              <li class="lg:pr-2 " data-te-nav-item-ref>
+                <Link style={{ color: "white" , paddingRight: "6px"}} to='/complaint'>
                   Complaint
                 </Link>
               </li>
               <li class="lg:pr-2" data-te-nav-item-ref>
-                <Link style={{ color: "white" }} to='/productRegistration'>
+                <Link style={{ color: "white" , paddingRight: "6px"}} to='/productRegistration'>
                   Products
                 </Link>
               </li>
               <li class="lg:pr-2" data-te-nav-item-ref>
-                <Link style={{ color: "white" }} to='/cart'>
+                <Link style={{ color: "white" , paddingRight: "6px"}} to='/cart'>
                   Cart
                 </Link>
               </li>
 
               <li class="lg:pr-2" data-te-nav-item-ref>
-                <Link style={{ color: "white" }} to='/delivery'>
+                <Link style={{ color: "white" , paddingRight: "6px"}} to='/delivery'>
                   Delivery
                 </Link>
               </li>
