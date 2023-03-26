@@ -7,15 +7,12 @@ import Carousel from "./components/Carousel";
 import Navbar from "./components/Navbar";
 import { useNavigate } from "react-router";
 import globalVar from "./components/globalVar";
-import OrderConfirm from './pages/OrderConfirm';
 import Footer from './components/Footer';
 
 function App() {
   const navigate = useNavigate();
   const [farms, setFarm] = useState([]);
-  if (!globalVar.value) {
-    navigate("/login");
-  }
+
   const handleLogOut = () => (globalVar.value = false);
 
   useEffect(() => {
@@ -34,23 +31,21 @@ function App() {
     farms.length === 0
       ? "No farms"
       : farms.map((farm, key) => (
-          <Cards
-            title={farm.farm_name}
-            price={5}
-            class={farm.farm_address}
-            key={key}
-            email={farm.email}
-          />
-        ));
+        <Cards
+          title={farm.farm_name}
+          price={5}
+          class={farm.farm_address}
+          key={key}
+          email={farm.email}
+        />
+      ));
   const log = globalVar.value ? "Logout" : "Login";
 
   return (
     <div>
-      <Navbar log={log} handleLogOut={handleLogOut} />
-      <Carousel />
-      <div class="grid grid-cols-4 gap-4">{farmList}</div>
-      <Navbar className="fixed inset-x-0 top-0" />
-      
+      <Navbar className="fixed inset-x-0 top-0" log={log} handleLogOut={handleLogOut} />
+
+
       <div style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}>
         <Carousel
           show={2}
@@ -95,7 +90,7 @@ function App() {
               <img src="https://images.unsplash.com/photo-1481555716071-8830d3e254ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGluZGlhbiUyMGZhcm1lcnxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="placeholder" style={{ width: '100%' }} />
             </div>
           </div>
-          
+
         </Carousel>
       </div>
       <div class="p-4 mb-4 grid grid-cols-4 gap-4">
