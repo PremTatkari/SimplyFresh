@@ -27,6 +27,8 @@ router.post("/", (req, res) => {
   );
 });
 
+
+
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
   Farmer.findOne({ email: email }).then((foundFarmer) => {

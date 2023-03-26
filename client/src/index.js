@@ -12,6 +12,9 @@ import Cart from './pages/Cart';
 
 import About from './pages/About';
 import OrderConfirm from './pages/OrderConfirm';
+import Delivery from './pages/Delivery';
+import Complaint from './pages/Complaint';
+import Console from './Fcomponents/Console';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -24,6 +27,9 @@ export default function Main() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/about" element={<About />} />
+          <Route path="/complaint" element={<Complaint />} />
+          <Route path="/console" element={<Console />} />
+          <Route path="/delivery" element={<Delivery />} />
           <Route path="/producePage" element={<Exp />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/orderconfirm" element={<OrderConfirm />} />

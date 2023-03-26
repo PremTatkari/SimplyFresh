@@ -1,6 +1,5 @@
 import React from "react";
 //Bootstrap for responsiveness
-import 'bootstrap/dist/css/bootstrap.min.css';
 class OrderConfirm extends React.Component {
  
   render() {
