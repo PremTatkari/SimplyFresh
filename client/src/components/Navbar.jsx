@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { farmerUser } from "./Login";
+import Dropdown from "./Dropdown";
+import { useTranslation } from 'react-i18next'
 
 export default function Navbar(props) {
 
-   import Dropdown from "./Dropdown";
-import { useTranslation } from 'react-i18next'
+
 
 const languages = [
   { value: 'en', text: "English" },
