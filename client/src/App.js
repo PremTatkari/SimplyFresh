@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import './cara.css';
+import './cara.css'
 import Cards from './components/Cards';
 import Carousel from './components/Carousel';
 import Navbar from './components/Navbar';
@@ -72,6 +72,7 @@ function App() {
               <img src="https://images.unsplash.com/photo-1481555716071-8830d3e254ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGluZGlhbiUyMGZhcm1lcnxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60" alt="placeholder" style={{ width: '100%' }} />
             </div>
           </div>
+          
         </Carousel>
       </div>
       <div class="p-4 mb-4 grid grid-cols-4 gap-4">
