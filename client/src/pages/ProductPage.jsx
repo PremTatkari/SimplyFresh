@@ -2,6 +2,7 @@ import React, {useState,useEffect} from "react";
 import axios from "axios";
 import Cards from "../components/Cards";
 import { useParams } from "react-router";
+import Navbar from "../components/Navbar";
 
 export default function ProductPage() {
   const [products, setProduct] = useState([]);
