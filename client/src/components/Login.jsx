@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "../style.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import globalVar from "./globalVar";
+
+export let farmerUser = "";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -11,21 +14,23 @@ export default function Login() {
   });
 
   const onChange = (e) => {
-    setFarmer({...farmer, [e.target.name]: e.target.value });
+    setFarmer({ ...farmer, [e.target.name]: e.target.value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/api/farmer/login",farmer)
+      .post("http://localhost:5000/api/farmer/login", farmer)
       .then((res) => {
         setFarmer({
           email: "",
           password: "",
         });
         alert(res.data.msg);
-        res.data.isLogged ? navigate("/") : navigate("/login")
+        globalVar.value = res.data.Logged;
+        farmerUser = res.data.foundFarmer.email;
+        res.data.Logged ? navigate("/") : navigate("/login");
       })
       .catch((err) => console.log("Error while farmer registration"));
   };

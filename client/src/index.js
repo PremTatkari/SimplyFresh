@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { Suspense } from 'react';
 import './index.css';
 import App from './App';
-import Exp from './pages/ProductPage';
+import ProductPage from './pages/ProductPage';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import ProductRegistration from './pages/ProductRegistration';
@@ -32,10 +32,10 @@ export default function Main() {
           <Route path="/complaint" element={<Complaint />} />
           <Route path="/console" element={<Console />} />
           <Route path="/delivery" element={<Delivery />} />
-          <Route path="/producePage" element={<Exp />} />
+          <Route path="/producePage/:email" element={<ProductPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/orderconfirm" element={<OrderConfirm />} />
-          <Route path="/productRegistration" element={<ProductRegistration />} />
+          <Route path="/productRegistration/" element={<ProductRegistration />} />
           <Route path="*" element={<h1>404</h1>} />
         </Routes>
       </BrowserRouter>
