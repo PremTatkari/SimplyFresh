@@ -62,7 +62,7 @@ export default function ProductPage() {
           ))}
         </div>
       </div>
-      <Footer/>
+      <div class="fixed inset-x-0 bottom-0"><Footer /> </div>
     </div>
   )
 }

@@ -6,6 +6,7 @@ import {
     Typography,
 } from "@material-tailwind/react";
 import axios from "axios";
+import Footer from "../components/Footer";
 
 import { useNavigate } from "react-router";
 
@@ -84,6 +85,7 @@ export default function ProductRegistration() {
                     </form>
                 </Card>
             </div>
+            <div class="fixed inset-x-0 bottom-0"><Footer /> </div>
         </div>
     );
 }

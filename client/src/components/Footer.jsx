@@ -1,5 +1,4 @@
 import { Typography } from "@material-tailwind/react";
-
 import { Link } from "react-router-dom";
  
 export default function Footer() {
@@ -15,7 +14,7 @@ export default function Footer() {
             color="blue-gray"
             className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
           >
-            <Link style={{ color: "blue-gray" }} to='/about'>
+            <Link style={{ color: "blue-gray" , textDecoration:"none"}} to='/about'>
                   About us
                 </Link>
           </Typography>

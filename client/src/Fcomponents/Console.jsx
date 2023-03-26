@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import "../console.css";
 import image from '../farmericon.png';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts"
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Console() {
 
@@ -13,7 +15,8 @@ export default function Console() {
     ];
     return (
         <div>
-            <div class="float-container">
+            <Navbar />
+            <div className="float-container pb-8">
 
                 <div class="float-child">
                     <div style={{ fontSize: '30px' }}>Welcome Rayson</div>
@@ -27,44 +30,44 @@ export default function Console() {
                         </div>
                         <div style={{ fontSize: '30px' }}>Current Month Profit
                             <h1>₹4000</h1>
-                        </div> 
-                              
-                        
                         </div>
-                    <div>
-                        </div>    
+
 
                     </div>
-
-                    <div class="float-child">
-                        <div >Your Profits</div>
-                        <div>
-
-                            <BarChart
-                                width={500}
-                                height={300}
-                                data={data}
-                                margin={{
-                                    top: 5,
-                                    right: 30,
-                                    left: 20,
-                                    bottom: 5,
-                                }}
-                                barSize={20}
-                            >
-                                <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
-                                <YAxis />
-                                <Tooltip />
-                                <Legend />
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <Bar dataKey="value" fill="#8884d8" background={{ fill: '#eee' }} />
-                            </BarChart>
-
-                        </div>
+                    <div>
                     </div>
 
                 </div>
 
+                <div class="float-child">
+                    <div >Your Profits</div>
+                    <div>
+
+                        <BarChart
+                            width={500}
+                            height={300}
+                            data={data}
+                            margin={{
+                                top: 5,
+                                right: 30,
+                                left: 20,
+                                bottom: 5,
+                            }}
+                            barSize={20}
+                        >
+                            <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
+                            <YAxis />
+                            <Tooltip />
+                            <Legend />
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <Bar dataKey="value" fill="#8884d8" background={{ fill: '#eee' }} />
+                        </BarChart>
+
+                    </div>
+                </div>
+
             </div>
-            )
+            <div class="fixed inset-x-0 bottom-0"><Footer /> </div>
+        </div>
+    )
 }

@@ -24,7 +24,7 @@ export default function Delivery() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
 
                     <div className="mt-10 flex justify-center items-center grid grid-rows-3 ">
-                        <div className='h-27 max-w-full p-8 m-8 bg-white items-center justify-center '>
+                        <div className='h-27 w-50 p-8 m-8 bg-white items-center justify-center rounded-md'>
 
                             From: Farmers Location
                             <span className='m-10'></span>
@@ -41,7 +41,7 @@ export default function Delivery() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <div class="fixed inset-x-0 bottom-0"><Footer /> </div>
         </div>
     );
 };

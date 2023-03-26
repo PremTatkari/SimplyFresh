@@ -1,13 +1,15 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import Dropdown from "./Dropdown";
+
 
 export default function Navbar() {
 
   return (
     <div>
       <nav
-        class="fixed top-0 z-50 flex-no-wrap relative flex w-full items-center justify-between bg-neutral-100 py-4 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start"
+        class="fixed top-0 flex-no-wrap relative flex w-full items-center justify-between bg-neutral-100 py-4 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start"
         data-te-navbar-ref
       >
         <div class="flex w-full flex-wrap items-center justify-between px-6">
@@ -79,17 +81,11 @@ export default function Navbar() {
 
           <div class="relative flex items-center">
 
-            <ul>
-              <li class="lg:pr-2" data-te-nav-item-ref>
-                <Link style={{ color: "white" }} to='/Login'>
-                  Login
-                </Link>
-              </li>
-
-            </ul>
+            <Dropdown />
 
           </div>
         </div>
+
       </nav>
     </div>
   );

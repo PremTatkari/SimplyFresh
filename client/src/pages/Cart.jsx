@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import OrderConfirm from './OrderConfirm';
+import Footer from '../components/Footer';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([
@@ -79,6 +80,7 @@ const Cart = () => {
                   <p>Your cart is currently empty.</p>
               )}
           </div>
+          <div class="fixed inset-x-0 bottom-0"><Footer /> </div>
       </div></>
           );
           };

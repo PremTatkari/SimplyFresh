@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import {
     Card,
@@ -10,6 +10,15 @@ import {
 import Footer from '../components/Footer';
 
 export default function Complaint() {
+    const [farmer, setFarmer] = useState({
+        email: "",
+        complaint: "",
+      });
+    
+      const onChange = (e) => {
+        setFarmer({...farmer, [e.target.name]: e.target.value });
+      };
+    
     return (
         <div>
             <Navbar />
@@ -21,31 +30,32 @@ export default function Complaint() {
                         Have a complaint or issue?
                     </p>
                 </div>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 ">
 
                     <div className="mt-10 flex justify-center items-center grid grid-rows-3 ">
-                        <div className='h-27 max-w-full p-8 m-8 bg-white items-center justify-center '>
+                        <div className='h-27 w-50 p-10 m-8 bg-white items-center justify-center rounded-md'>
 
                             Specify
                             <span className='m-10'></span>
-                            <div class="inputbox" className='outline outline-2  outline-offset-2'>
+                            <div class="inputbox" className='outline outline-2  outline-offset-2 '>
                                 <input
                                     name="email"
-                                    value=""
+                                    value={farmer.email}
                                     type="email"
                                     required
-                                    onChange=""
+                                    onChange={onChange}
                                 />
                                 <label for="">Email</label>
                             </div>
                             Elaborate the issue
-                            <div class="inputbox" className='outline outline-2  outline-offset-2'>
-                                <input
-                                    name="issue"
-                                    value=""
+                            <div class="inputbox" className='outline outline-2  outline-offset-2 '>
+                                <textarea
+                                    name="complaint"
+                                    value={farmer.complaint}
                                     type="textarea"
                                     required
-                                    onChange=""
+                                    onChange={onChange}
+                                    rows = "6"
                                 />
                                 <label for="">Issue</label>
                             </div>
@@ -58,7 +68,7 @@ export default function Complaint() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <div class="fixed inset-x-0 bottom-0"><Footer /> </div>
         </div>
     );
 };

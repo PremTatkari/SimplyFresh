@@ -54,7 +54,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <div class="fixed inset-x-0 bottom-0"><Footer /> </div>
         </div>
     );
 };
