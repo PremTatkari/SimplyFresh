@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import './cara.css';
+import './cara.css'
 import Cards from './components/Cards';
 import Carousel from './components/Carousel';
 import Navbar from './components/Navbar';
@@ -29,7 +29,7 @@ function App() {
       <Navbar /> 
       <div style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}>
             <Carousel
-                show={3}
+                show={2}
             >
                 <div>
                     <div style={{padding: 8}}>
