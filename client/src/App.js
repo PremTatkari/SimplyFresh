@@ -27,7 +27,7 @@ function App() {
   return (
     <div>
       <Navbar className="fixed inset-x-0 top-0" />
-
+      
       <div style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}>
         <Carousel
           show={2}

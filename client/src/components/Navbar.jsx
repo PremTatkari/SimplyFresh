@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
+import { useTranslation } from 'react-i18next'
+
+const languages = [
+  { value: 'en', text: "English" },
+  { value: 'hi', text: "Hindi" },
+  { value: 'mr', text: "Marathi" }
+]
 
 
 export default function Navbar() {
+
+  const { t } = useTranslation();
+  const [lang, setLang] = useState('');
+
+  // This function put query that helps to 
+  // change the language
+  const handleChange = e => {
+    setLang(e.target.value);
+    let loc = "http://localhost:3000/";
+    window.location.replace(loc + "?lng=" + e.target.value);
+  }
 
   return (
     <div>
@@ -56,23 +74,23 @@ export default function Navbar() {
             >
               <li class="lg:pr-2" data-te-nav-item-ref>
                 <Link style={{ color: "white" }} to='/complaint'>
-                  Complaint
+                {t('complaint')}
                 </Link>
               </li>
               <li class="lg:pr-2" data-te-nav-item-ref>
                 <Link style={{ color: "white" }} to='/productRegistration'>
-                  Products
+                {t('products')}
                 </Link>
               </li>
               <li class="lg:pr-2" data-te-nav-item-ref>
                 <Link style={{ color: "white" }} to='/cart'>
-                  Cart
+                {t('cart')}
                 </Link>
               </li>
 
               <li class="lg:pr-2" data-te-nav-item-ref>
                 <Link style={{ color: "white" }} to='/delivery'>
-                  Delivery
+                {t('delivery')}
                 </Link>
               </li>
 
@@ -80,7 +98,14 @@ export default function Navbar() {
           </div>
 
           <div class="relative flex items-center">
-
+            <div className="p-2">
+              <select value={lang} onChange={handleChange}>
+                {languages.map(item => {
+                  return (<option key={item.value}
+                    value={item.value}>{item.text}</option>);
+                })}
+              </select>
+            </div>
             <Dropdown />
 
           </div>

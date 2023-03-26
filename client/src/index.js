@@ -1,6 +1,8 @@
-import React from 'react';
+
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import React, { Suspense } from 'react';
 import './index.css';
 import App from './App';
 import Exp from './pages/ProductPage';
@@ -9,7 +11,7 @@ import Signup from './components/Signup';
 import ProductRegistration from './pages/ProductRegistration';
 
 import Cart from './pages/Cart';
-
+import './components/i18n'
 import About from './pages/About';
 import OrderConfirm from './pages/OrderConfirm';
 import Delivery from './pages/Delivery';
@@ -42,7 +44,9 @@ export default function Main() {
 }
 
 root.render(
-  <React.StrictMode>
+  <React.StrictMode><Suspense fallback="...loading">
     <Main />
-  </React.StrictMode>
+  </Suspense>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
