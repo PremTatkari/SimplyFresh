@@ -11,6 +11,7 @@ import ProductRegistration from './pages/ProductRegistration';
 import Cart from './pages/Cart';
 
 import About from './pages/About';
+import OrderConfirm from './pages/OrderConfirm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -25,6 +26,7 @@ export default function Main() {
           <Route path="/about" element={<About />} />
           <Route path="/producePage" element={<Exp />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/orderconfirm" element={<OrderConfirm />} />
           <Route path="/productRegistration" element={<ProductRegistration />} />
           <Route path="*" element={<h1>404</h1>} />
         </Routes>
