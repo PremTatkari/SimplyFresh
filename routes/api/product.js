@@ -5,8 +5,9 @@ const Product = require("../../models/Product")
 
 router.get("/test", (req, res) => res.send("Product route testing"));
 
-router.get("/", (req, res) => {
-  Product.find()
+router.get("/:email", (req, res) => {
+  // console.log(product + "|||" + req.params.email);
+  Product.find({farmer: req.params.email})
     .then((products) => res.json(products))
     .catch((err) =>
       res.status(404).json({ noproductfound: "No Product Found" })
@@ -14,7 +15,6 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  console.log(req.body);
   Product.create(req.body)
     .then((product) => res.json({ msg: "Product added successfully" }))
     .catch((err) => res.status(404).json({ error: "unable to add product" }));

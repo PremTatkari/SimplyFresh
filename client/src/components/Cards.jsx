@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 export default function Cards(props) {
   return (
-    <Link to="/producePage">
+    <Link to={"/producePage/" + props.email} >
       <Card className="w-full max-w-[26rem] shadow-lg">
         <CardHeader floated={false} color="blue-gray">
           <img
@@ -43,7 +43,7 @@ export default function Cards(props) {
             </Typography>
           </div>
           <Typography color="gray">{props.class}</Typography>
-          
+
         </CardBody>
       </Card>
     </Link>

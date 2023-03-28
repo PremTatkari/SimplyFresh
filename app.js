@@ -1,11 +1,22 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const cors = require("cors");
+const session = require("express-session");
+const passport = require("passport");
 
 const product = require("./routes/api/product");
 const farmer = require("./routes/api/farmer")
 
 const app = express();
+
+app.use(session({
+    secret: "Our little secret.",
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 connectDB();
 
